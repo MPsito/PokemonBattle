@@ -4,6 +4,7 @@ public class Fighter : MonoBehaviour
 {
    [SerializeField]
    private Animator animator;
+   public Animator Animator => animator;
    [SerializeField]
    private Health health;
    public Health Health => health;
@@ -20,6 +21,6 @@ public class Fighter : MonoBehaviour
     }
     public void Die()
     {
-        animator.Play("DIe", 0, 0f);
+        animator.Play("Die", 0, 0f);
     }
 }
