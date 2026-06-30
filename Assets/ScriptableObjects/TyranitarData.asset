@@ -17,13 +17,20 @@ MonoBehaviour:
   attacks:
   - name: Hit
     animationName: Attack1
+    attackSoundName: Attack 2_ty
     minDamage: 15
     maxDamage: 25
     chargeParticles: {fileID: 1206498299807332555, guid: af6c1e3f046eecd4d81330aeb285600f, type: 3}
     attackParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   - name: FIre
     animationName: Attack2
+    attackSoundName: Attack 1_ty
     minDamage: 20
     maxDamage: 50
     chargeParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
     attackParticles: {fileID: 8552975244236537556, guid: 8929a64a9de058d4ba7e27e6546d414a, type: 3}
+  chargeTime: 2
+  appearParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
+  appearSoundName: Appear_ty
+  damageSoundName: Dmg_ty
+  deadSoundName: Die_ty

@@ -17,13 +17,20 @@ MonoBehaviour:
   attacks:
   - name: HitMagic
     animationName: Attack1
+    attackSoundName: Attack 1_fg
     minDamage: 30
     maxDamage: 60
     chargeParticles: {fileID: 5824670795371433373, guid: f6fd568b816c64943a44efc3add3a881, type: 3}
     attackParticles: {fileID: 1332178941932415447, guid: 2999ba71962d8d24d98d88cd9c8ecd56, type: 3}
   - name: MagicRay
     animationName: Attack2
+    attackSoundName: Attack 2_fg
     minDamage: 60
     maxDamage: 120
     chargeParticles: {fileID: 5824670795371433373, guid: f6fd568b816c64943a44efc3add3a881, type: 3}
     attackParticles: {fileID: 8016548290758222525, guid: 16a7ab65fc8b6c0489cfb009ba38c22a, type: 3}
+  chargeTime: 2
+  appearParticles: {fileID: 0}
+  appearSoundName: Appear_fg
+  damageSoundName: Dmg_fg
+  deadSoundName: Die_fg

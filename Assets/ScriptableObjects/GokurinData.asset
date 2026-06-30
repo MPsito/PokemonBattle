@@ -17,13 +17,20 @@ MonoBehaviour:
   attacks:
   - name: Splash
     animationName: Attack1
+    attackSoundName: Attack 1_gr
     minDamage: 10
     maxDamage: 20
     chargeParticles: {fileID: 2035434336887856023, guid: e2325e430fab13a4c858032d44fe6326, type: 3}
     attackParticles: {fileID: 767533844818158055, guid: ef3cfd7b64eb4a84dadc00b902b37f2a, type: 3}
   - name: Hit
     animationName: Attack2
+    attackSoundName: Attack 2_gr
     minDamage: 15
     maxDamage: 30
     chargeParticles: {fileID: 2035434336887856023, guid: e2325e430fab13a4c858032d44fe6326, type: 3}
     attackParticles: {fileID: 2342930222286093891, guid: ecd7e195dfe809e4a9de2955f296beca, type: 3}
+  chargeTime: 2
+  appearParticles: {fileID: 767533844818158055, guid: ef3cfd7b64eb4a84dadc00b902b37f2a, type: 3}
+  appearSoundName: Appear_gr
+  damageSoundName: Dmg_gr
+  deadSoundName: Die_gr
