@@ -30,7 +30,7 @@ MonoBehaviour:
     chargeParticles: {fileID: 5824670795371433373, guid: f6fd568b816c64943a44efc3add3a881, type: 3}
     attackParticles: {fileID: 8016548290758222525, guid: 16a7ab65fc8b6c0489cfb009ba38c22a, type: 3}
   chargeTime: 2
-  appearParticles: {fileID: 0}
+  appearParticles: {fileID: 8016548290758222525, guid: 16a7ab65fc8b6c0489cfb009ba38c22a, type: 3}
   appearSoundName: Appear_fg
   damageSoundName: Dmg_fg
   deadSoundName: Die_fg

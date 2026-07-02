@@ -17,7 +17,7 @@ MonoBehaviour:
   attacks:
   - name: Hit
     animationName: Attack1
-    attackSoundName: Attack 2_ty
+    attackSoundName: Attack 2_ ty
     minDamage: 15
     maxDamage: 25
     chargeParticles: {fileID: 1206498299807332555, guid: af6c1e3f046eecd4d81330aeb285600f, type: 3}
