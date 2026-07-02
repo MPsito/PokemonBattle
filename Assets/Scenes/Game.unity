@@ -1151,7 +1151,6 @@ GameObject:
   - component: {fileID: 723247905}
   - component: {fileID: 723247904}
   - component: {fileID: 723247903}
-  - component: {fileID: 723247906}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
@@ -1174,10 +1173,8 @@ MonoBehaviour:
   StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 3.3333333
@@ -1185,8 +1182,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 3.3333333
       outSlope: 0
@@ -1200,33 +1196,11 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100796270}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 1026207604}, m_TargetAssemblyTypeName: FightManager, Assembly-CSharp, m_MethodName: AddFighter, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 2100796270}, m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: RemoveFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100796270}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 1026207604}, m_TargetAssemblyTypeName: FightManager, Assembly-CSharp, m_MethodName: RemoveFighter, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 2100796270}, m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
 --- !u!114 &723247904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,7 +1227,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 723247906}
+  mPreview: {fileID: 0}
 --- !u!4 &723247905
 Transform:
   m_ObjectHideFlags: 0
@@ -1270,25 +1244,6 @@ Transform:
   - {fileID: 1057117657}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &723247906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723247902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 723247904}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: GokurinCard
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 723247904}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &754093850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1881,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1099268593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1026207604}
+        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
+        m_MethodName: StartFight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1099268593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2509,6 +2476,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402477785}
   m_CullTransparentMesh: 1
+--- !u!1 &1409590159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409590160}
+  - component: {fileID: 1409590162}
+  - component: {fileID: 1409590161}
+  m_Layer: 5
+  m_Name: TimerImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1409590160
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409590159}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903171063}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1409590161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409590159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1409590162
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409590159}
+  m_CullTransparentMesh: 1
 --- !u!1 &1501460497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,6 +2626,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501460497}
   m_CullTransparentMesh: 1
+--- !u!1 &1515515217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1515515219}
+  - component: {fileID: 1515515218}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1515515218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515515217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53970175ebb04c54091a6cd456fe1b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  timerData: []
+  timerImage: {fileID: 0}
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &1515515219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515515217}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1026.8348, y: 0.00003, z: 6908.7627}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1539059777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 31212bfe34e270e40aed833c219c3827, type: 3}
@@ -3079,7 +3170,6 @@ GameObject:
   - component: {fileID: 1837152827}
   - component: {fileID: 1837152826}
   - component: {fileID: 1837152825}
-  - component: {fileID: 1837152828}
   m_Layer: 0
   m_Name: ImageTarget 3
   m_TagString: Untagged
@@ -3102,10 +3192,8 @@ MonoBehaviour:
   StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 3.3333333
@@ -3113,8 +3201,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 3.3333333
       outSlope: 0
@@ -3128,33 +3215,11 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1539059778}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 1026207604}, m_TargetAssemblyTypeName: FightManager, Assembly-CSharp, m_MethodName: AddFighter, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1539059778}, m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: RemoveFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1539059778}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 1026207604}, m_TargetAssemblyTypeName: FightManager, Assembly-CSharp, m_MethodName: RemoveFighter, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1539059778}, m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
 --- !u!114 &1837152826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3181,7 +3246,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 1837152828}
+  mPreview: {fileID: 0}
 --- !u!4 &1837152827
 Transform:
   m_ObjectHideFlags: 0
@@ -3199,25 +3264,6 @@ Transform:
   - {fileID: 1741268607}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &1837152828
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837152823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 1837152826}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: FlygonCard
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 1837152826}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &1900219320
 GameObject:
   m_ObjectHideFlags: 0
@@ -3389,6 +3435,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1099268590}
+  - {fileID: 1409590160}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3407,7 +3454,6 @@ GameObject:
   - component: {fileID: 2021462063}
   - component: {fileID: 2021462062}
   - component: {fileID: 2021462061}
-  - component: {fileID: 2021462064}
   m_Layer: 0
   m_Name: ImageTarget 2
   m_TagString: Untagged
@@ -3430,10 +3476,8 @@ MonoBehaviour:
   StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 3
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 3.3333333
@@ -3441,8 +3485,7 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
+    - time: 0.3
       value: 1
       inSlope: 3.3333333
       outSlope: 0
@@ -3456,33 +3499,11 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1798852440}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 1026207604}, m_TargetAssemblyTypeName: FightManager, Assembly-CSharp, m_MethodName: AddFighter, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1798852440}, m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: RemoveFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1798852440}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 1026207604}, m_TargetAssemblyTypeName: FightManager, Assembly-CSharp, m_MethodName: RemoveFighter, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1798852440}, m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
 --- !u!114 &2021462062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3509,7 +3530,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2021462064}
+  mPreview: {fileID: 0}
 --- !u!4 &2021462063
 Transform:
   m_ObjectHideFlags: 0
@@ -3527,25 +3548,6 @@ Transform:
   - {fileID: 1124611852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &2021462064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021462060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
-  mObserverBehaviour: {fileID: 2021462062}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: TyranitarCard
-  mDatasetName: 
-  mCastedBehaviour: {fileID: 2021462062}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &2064978749
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,3 +3684,4 @@ SceneRoots:
   - {fileID: 621415868}
   - {fileID: 1903171063}
   - {fileID: 244832597}
+  - {fileID: 1515515219}
