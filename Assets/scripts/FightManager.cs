@@ -10,6 +10,8 @@ private UnityEvent onFightReady;
 [SerializeField]
 private UnityEvent onCancelFight;
 [SerializeField]
+private UnityEvent <string> onFightEnd;
+[SerializeField]
 private UnityEvent onFightStart;
 [SerializeField]
 private int minimumFightrers = 2;
@@ -25,6 +27,7 @@ public void AddFighter(Fighter fighter)
             poolManager.GetObject(fighter.FighterData.appearParticles, fighter.transform.position);
             SoundManager.instance.Play(fighter.FighterData.appearSoundName);
             fighters.Add(fighter);
+            DialogSystem.Instance.ShowDialog(fighter.FighterData.fighterName + "Has Joined The fight!");
             if (fighters.Count >= minimumFightrers)
             {
                 onFightReady?.Invoke();
@@ -66,6 +69,7 @@ public void AddFighter(Fighter fighter)
             defender.transform.LookAt(attacker.transform);
             attacker.Animator.Play("Charge", 0, 0f);
             poolManager.GetObject(attackData.chargeParticles, attacker.transform.position);
+            DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "Attacks with" + attackData.name + "!");
             yield return new WaitForSeconds(attacker.FighterData.chargeTime);
             attacker.Animator.Play(attackData.animationName, 0, 0f);
             SoundManager.instance.Play(attackData.attackSoundName);
@@ -79,6 +83,7 @@ public void AddFighter(Fighter fighter)
             {
                 SoundManager.instance.Play(defender.FighterData.deadSoundName);
                 RemoveFighter(defender);
+                DialogSystem.Instance.ShowDialog(attacker.FighterData.fighterName + "Wins The Fight!");
                 FighterWin(attacker);
             }
             yield return new WaitForSeconds(1.5f);
@@ -86,6 +91,8 @@ public void AddFighter(Fighter fighter)
     }
     private void FighterWin(Fighter winner)
     {
-        Debug.Log(winner.name + "Wins the fight!");
+        onFightEnd?.Invoke(winner.FighterData.fighterName);
+        winner.Animator.Play("Victory",0, 0f);
+        winner.transform.LookAt(Camera.main.transform);
     }
 }
