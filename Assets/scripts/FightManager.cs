@@ -12,6 +12,8 @@ private UnityEvent onCancelFight;
 [SerializeField]
 private UnityEvent <string> onFightEnd;
 [SerializeField]
+private UnityEvent<DamageTarget> onDamageTaken;
+[SerializeField]
 private UnityEvent onFightStart;
 [SerializeField]
 private int minimumFightrers = 2;
@@ -20,6 +22,7 @@ private int  maximumFighters = 2;
 [SerializeField]
 private PoolManager poolManager;
 private List<Fighter> fighters = new  List<Fighter>();
+private DamageTarget  damageTarget = new DamageTarget();
 public void AddFighter(Fighter fighter)
     {
         if (fighters.Count < maximumFighters && !fighters.Contains(fighter))
@@ -79,6 +82,10 @@ public void AddFighter(Fighter fighter)
             Health defenderHealth = defender.GetComponent<Health>();
             SoundManager.instance.Play(defender.FighterData.damageSoundName);
             defenderHealth.TakeDamage(Random.Range(attackData.minDamage, attackData.maxDamage));
+            float damage = Random.Range(attackData.minDamage, attackData.maxDamage);
+            damageTarget.SetDamageTarget(defender.transform, damage);
+            defenderHealth.TakeDamage(damage);
+            onDamageTaken?.Invoke(damageTarget);
             if (defenderHealth.CurrentHealth <= 0)
             {
                 SoundManager.instance.Play(defender.FighterData.deadSoundName);
