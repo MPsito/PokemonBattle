@@ -1408,7 +1408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VuforiaScripts::DefaultObserverEventHandler
-  StatusFilter: 0
+  StatusFilter: 2
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -1436,34 +1436,10 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100796270}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: RemoveFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100796270}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &723247904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1479,14 +1455,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: GokurinCard
+  mTrackableName: 
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1.3945783
+  mAspectRatio: 1
   mImageTargetType: 3
-  mWidth: 0.14341253
+  mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: a0b4d17aed111d84fba8ff04a974e543, type: 3}
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1521,7 +1497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 723247904}
   mHiddenRoot: {fileID: 0}
-  mTargetName: GokurinCard
+  mTargetName: 
   mDatasetName: 
   mCastedBehaviour: {fileID: 723247904}
   mMeshFilter: {fileID: 0}
@@ -1679,7 +1655,7 @@ Animator:
   m_GameObject: {fileID: 821954125}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bca4ff1e4b619634cb3db9422ed1520a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6ddfba05d7b434c4b8d824d119a2fb57, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1704,7 +1680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogSystem
   dialogText: {fileID: 2001436378}
-  timeBetWeenWords: 0.25
+  timeBetWeenWords: 0.1
 --- !u!114 &821954129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1719,7 +1695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2109,6 +2085,21 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Victory
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDamageTaken:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2130127526}
+        m_TargetAssemblyTypeName: DamageText, Assembly-CSharp
+        m_MethodName: ShowDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   onFightStart:
@@ -3783,7 +3774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VuforiaScripts::DefaultObserverEventHandler
-  StatusFilter: 0
+  StatusFilter: 2
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -3811,34 +3802,10 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1539059778}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: RemoveFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1539059778}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1837152826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3854,17 +3821,17 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: FlygonCard
-  mInitializedInEditor: 1
+  mTrackableName: 
+  mInitializedInEditor: 0
   mDataSetPath: 
-  mAspectRatio: 1.3902439
-  mImageTargetType: 3
-  mWidth: 0.14385965
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 27961e22708080742a99a62fee429aea, type: 3}
+  mAspectRatio: 1
+  mImageTargetType: 2147483647
+  mWidth: 0
+  mHeight: 0
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 0
+  mTrackingOptimizationNeedsUpgrade: 1
   mPreview: {fileID: 1837152828}
 --- !u!4 &1837152827
 Transform:
@@ -3897,7 +3864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 1837152826}
   mHiddenRoot: {fileID: 0}
-  mTargetName: FlygonCard
+  mTargetName: 
   mDatasetName: 
   mCastedBehaviour: {fileID: 1837152826}
   mMeshFilter: {fileID: 0}
@@ -4135,7 +4102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4194,7 +4161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: VuforiaScripts::DefaultObserverEventHandler
-  StatusFilter: 0
+  StatusFilter: 2
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -4222,46 +4189,10 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: AddFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1798852440}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1026207604}
-        m_TargetAssemblyTypeName: FightManager, Assembly-CSharp
-        m_MethodName: RemoveFighter
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1798852440}
-          m_ObjectArgumentAssemblyTypeName: Fighter, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 621415867}
-        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: StopMusic
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2021462062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4277,14 +4208,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: TyranitarCard
+  mTrackableName: 
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1.4032258
-  mImageTargetType: 3
-  mWidth: 0.14252874
+  mAspectRatio: 1
+  mImageTargetType: 2147483647
+  mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 81b3f7f6d3e9a6e4fab1e4796a01c24e, type: 3}
+  mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -4320,7 +4251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Vuforia.Unity.Engine.dll::Vuforia.ImageTargetPreview
   mObserverBehaviour: {fileID: 2021462062}
   mHiddenRoot: {fileID: 0}
-  mTargetName: TyranitarCard
+  mTargetName: 
   mDatasetName: 
   mCastedBehaviour: {fileID: 2021462062}
   mMeshFilter: {fileID: 0}
@@ -4456,6 +4387,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2130127524}
   - component: {fileID: 2130127525}
+  - component: {fileID: 2130127526}
   m_Layer: 5
   m_Name: DamageText
   m_TagString: Untagged
@@ -4505,6 +4437,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2130127526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130127523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11cc02963760ecb4fa34db64b6ca7d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageText
+  animator: {fileID: 2130127525}
+  damageText: {fileID: 1612920883}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
