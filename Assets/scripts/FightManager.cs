@@ -31,6 +31,8 @@ public void AddFighter(Fighter fighter)
             SoundManager.instance.Play(fighter.FighterData.appearSoundName);
             fighters.Add(fighter);
             DialogSystem.Instance.ShowDialog(fighter.FighterData.fighterName + "Has Joined The fight!");
+            fighter.Health.InitializeHealth();
+            fighter.Animator.Play("Idle",0, 0f);
             if (fighters.Count >= minimumFightrers)
             {
                 onFightReady?.Invoke();
